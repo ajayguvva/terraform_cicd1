@@ -3,24 +3,34 @@
 **RUN A CICD PIPELINE FOR TERRAFORM TO INIT,FORMAT,VALIDATE,PLAN AND APPLY.**
 
 **1.JENKINS INSTALLATION**
+
 First install Jenkins in a server
+
 Create a ec2 instance and connect to that instance then switch to root user by using
  (sudo su –) command.
+ 
 install Jenkins using this commands 
+
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian/jenkins.io-2023.key
+  
 echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
   https://pkg.jenkins.io/debian binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
+  
 sudo apt-get update
+
 sudo apt-get install Jenkins 
- 
+
+![image](https://github.com/user-attachments/assets/5d1f224b-2411-4782-a482-66fd26012cf2)
+
 Jenkins requires java to run
 
 **2.INSTALL JAVA**  
 apt install openjdk-17-jdk -y : This command used to install java 
 java -version : To check the java version
- 
+ ![image](https://github.com/user-attachments/assets/046e211b-694b-477a-8089-3aaf1c07f7d9)
+
 after installing Jenkins and java in the server we need to restart the Jenkins server
 systemctl restart Jenkins : to restart the Jenkins
 systemctl status Jenkins : to check the Jenkins status , whether its running or not  
