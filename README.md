@@ -23,13 +23,17 @@ Jenkins requires java to run
 
 **2.INSTALL JAVA**  
 `apt install openjdk-17-jdk -y` : This command used to install java 
+
 `java -version` : To check the java version
  
 ![image](https://github.com/user-attachments/assets/2500de6b-decf-4d5d-a059-6009018e9621)
 
 after installing Jenkins and java in the server we need to restart the Jenkins server
+
 `systemctl restart Jenkins` : to restart the Jenkins
+
 `systemctl status Jenkins` : to check the Jenkins status , whether its running or not  
+
 ![image](https://github.com/user-attachments/assets/0990aef6-988b-4a12-9c25-f7d1a3b64b46)
 
 **3. LOGIN INTO JENKINS DASHBOARD**
@@ -48,7 +52,9 @@ Copy the public ip of the server and paste in the browser with port number 8080{
 
  
 To unlock Jenkins we need administrator password 
+
 Go to your terminal and paste the command below to get the password to unlock Jenkins
+
 ` Cat /var/lib/jenkins/secrets/initialAdminPassword
 ` 
 ![image](https://github.com/user-attachments/assets/5a84b066-ef9a-4bcb-8d0b-7ace07715b66)
@@ -62,7 +68,9 @@ Create an admin user by filling in the required information
 ![image](https://github.com/user-attachments/assets/56a563ee-452b-41b6-87dc-775950f10ef6)
 
 Click save and finish.
+
 Now Jenkins setup has been completed.
+
 ![image](https://github.com/user-attachments/assets/e16cf76e-2d57-4295-b13a-f5b76395152f)
 
  
@@ -71,7 +79,7 @@ in Jenkins dashboard select manage Jenkins and click on plugins and install terr
 Now, again select manage Jenkins and click on tools and install terraform and save.
 Select credentials and add aws credentials and git credentials.
  
-Create a vpc ,public and private subnet , internet gateway ,rout table and create a ec2 instance in public subnet by using terraform.
+**Create a vpc ,public and private subnet , internet gateway ,rout table and create a ec2 instance in public subnet by using terraform.**
 
 **	In main.tf** 
  ```
